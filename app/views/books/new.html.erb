@@ -1,2 +1,16 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h1>New book</h1>
+<!-- form_with部分 -->
+<table>
+<%= form_with model:@book, local:true do |f| %>
+
+  <tr><th>Title</th>
+  <td><%= f.text_field :title %></td></tr>
+
+  <tr><th>Body</th>
+  <td><%= f.text_area :body %></td></tr>
+
+  <tr><th></th>
+  <td><%= f.submit 'Create Book' %></td></tr>
+
+<% end %>
+</table>
