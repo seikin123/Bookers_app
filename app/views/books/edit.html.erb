@@ -1,4 +1,12 @@
-<h1>Eding Book</h1>
+<h1>Editng Book</h1>
+<% if @book.errors.any? %>
+<h4><%= pluralize(@book.errors.count,"error") %> prohibited this product from being saved:</h4>
+<% @book.errors.full_messages.each do |message| %>
+<%= message %>
+<% end %>
+<% end %>
+
+
 <!-- form_with部分 -->
 <%= form_with model:@book, local: true do |f| %>
 <table>
