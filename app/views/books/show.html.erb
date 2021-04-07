@@ -2,15 +2,15 @@
 <%= notice %> 
 </p>
 
-<body>
+<table>
   <p><strong>Title:</strong>
   <%= @book.title %></p>
   <p><strong>Body:</strong>
   <%= @book.body %></p>
 
-  <p class="edit"><%= link_to "Edit", edit_book_path(@book) %>|
-  <p class="back"><%= link_to "back", books_path %></p>
-</body>
+  <td class="edit"><%= link_to "Edit", edit_book_path(@book) %></td>
+  <td class="back"><%= link_to "back", books_path %></td>
+</table>
 
 
 
