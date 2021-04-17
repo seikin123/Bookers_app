@@ -11,13 +11,16 @@
 <%= form_with model:@book, local: true do |f| %>
 <table>
   <tr><th>Title</th>
-      <td><%= f.text_field :title %></td></tr>
+  <td><%= f.text_field :title %></td></tr>
   
   <tr><th>Body</th>
   <td><%= f.text_area :body %></td></tr>
   <tr><th></th>
   <td><%= f.submit 'Update Book' %></td></tr>
 <% end %>
+</table>
+<table>
   <td><%= link_to "show", book_path %></td>
+  <td>|</td>
   <td><%= link_to "back", books_path %></td>
 </table>
